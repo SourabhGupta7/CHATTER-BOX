@@ -1,6 +1,6 @@
 .signOutButton:hover {
     cursor: pointer;
-    color: #D7DF22;
+    color: #ffffff;
     font-weight: bolder;
 }
 
@@ -13,6 +13,7 @@
     flex-direction: column !important;
     width: 100%;
 }
+
 
 .container {
     height: 100vH;
