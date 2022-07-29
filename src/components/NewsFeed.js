@@ -1,4 +1,6 @@
 import React, { useEffect } from "react";
+import axios from 'axios';
+
 import { Link, Outlet, useNavigate } from "react-router-dom";
 //importing bootstrap components
 import { Button, Col, Container, Nav, Navbar, Row } from "react-bootstrap";
@@ -12,7 +14,26 @@ export default function NewsFeed() {
     navigate("/newsfeed/allaccounts");
   }
 
+
   function handleSignOut(e) {
+
+    async function endAuth(context) {
+      try {
+        this.$axios.setHeader('Authorization', `Bearer ${JSON.parse(localStorage.getItem("UserId")).token}`);
+        await axios.post("auth/logout");
+        
+        context.commit("setUser", {
+          token: null,
+          userId: null,
+        });
+        this.$axios.setHeader('Authorization', null)
+      } catch (e) {
+        const error = new Error("Something went wrong");
+        throw error;
+      }
+  }
+
+    
     localStorage.removeItem("UserId");
     localStorage.removeItem("Token");
     localStorage.removeItem("UserFirstName");
@@ -33,7 +54,7 @@ export default function NewsFeed() {
         <Col md={4}>
           <Row className="justify-content-center align-items-center">
             <Col className="text-sm-start text-center mb-sm-0 mb-3">
-              <h1 style={{color: "#ff2052", marginLeft:"75vh"}}>CHATTERBOX</h1>
+              <h1 style={{color: "white", marginLeft:"75vh"}}>CHATTERBOX</h1>
             </Col>
           </Row>
         </Col>
