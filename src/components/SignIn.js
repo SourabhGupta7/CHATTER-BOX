@@ -61,8 +61,10 @@ export default function SignIn() {
     console.log("toast");
   }
   return (
+
     //html part here formik to create forms more easily
     //divided into two parts half left and half right 
+    
     <Container fluid className={styles.container}>
        <Row className={styles.container}>
        <Col className={`${styles.colContainerLeft} ${styles.leftBackground}`}>
