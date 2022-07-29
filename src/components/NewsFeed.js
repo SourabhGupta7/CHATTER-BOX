@@ -28,18 +28,18 @@ export default function NewsFeed() {
   });
 //Jsx Part
   return (
-    <Container className="pt-3" style={{backgroundColor: "#000000"}}>
+    <Container fluid className={styles.container} style={{backgroundColor: "#000000"}} >
       <Row className="mb-3">
         <Col md={4}>
           <Row className="justify-content-center align-items-center">
-            <Col className="text-sm-start text-center mb-sm-0 mb-3">
-              <h1 style={{color: "#D7DF22"}}>CHATTER BOX</h1>
+            <Col className="text-sm-start text-center mb-sm-100 mb-100">
+              <h1 style={{color:"#7fffd4"}}>CHATTER BOX</h1>
             </Col>
           </Row>
         </Col>
         <Col md={8}>
-          <div className="d-flex justify-content-center align-items-center w-100 h-100" >
-            <Button variant="success" onClick={handleClick} style={{backgroundColor: "#D7DF22"}}>
+          <div fluid className="d-flex justify-content-center align-items-center w-200 h-200" >
+            <Button variant="success" onClick={handleClick} style={{backgroundColor: "#ff4500"}}>
               Find All User Accounts
             </Button>
           </div>
@@ -47,15 +47,15 @@ export default function NewsFeed() {
       </Row>
       <Row>
         <Col md={4}>
-          <Navbar bg="light" expand="lg" className="mb-3 mb-sm-0"  >
-            <Container className={styles.navbarContainer} style={{backgroundColor: "#000000"}}>
+          <Navbar bg="dark" expand="lg" className="mb-3 mb-sm-0"  >
+            <Container fluid className={styles.navbarContainer} style={{backgroundColor: "#000000"}}>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse>
               <Nav className={styles.navContainer} >
                 <ul className="list-group">
                 <Nav.Link>
                   <Link to="" className="text-decoration-none" >
-                    <li className="list-group-item fs-5 py-3   shadow" style={{color: "#D7DF22"}}>
+                    <li className="list-group-item fs-5 py-3 shadow" style={{color: "#9370db"}}>
                       <span >
                         {" "}
                          Newsfeed
@@ -65,7 +65,7 @@ export default function NewsFeed() {
                 </Nav.Link>
                 <Nav.Link>
                   <Link to="following" className="text-decoration-none">
-                    <li className="list-group-item fs-5 py-3  shadow" style={{color: "#D7DF22"}}>
+                    <li className="list-group-item fs-5 py-3  shadow" style={{color: "#ff1493"}}>
                       <span>
                           Following
                       </span>
@@ -74,7 +74,7 @@ export default function NewsFeed() {
                 </Nav.Link>
                 <Nav.Link>
                   <Link to="follower" className="text-decoration-none">
-                    <li className="list-group-item fs-5 py-3   shadow" style={{color: "#D7DF22"}}>
+                    <li className="list-group-item fs-5 py-3 shadow" style={{color: "#ff4500"}}>
                       <span>
                         Followers
                       </span>
@@ -83,7 +83,7 @@ export default function NewsFeed() {
                 </Nav.Link>
                 <Nav.Link>
                   <Link to="myprofile" className="text-decoration-none">
-                    <li className="list-group-item fs-5 py-3  shadow" style={{color: "#D7DF22"}}>
+                    <li className="list-group-item fs-5 py-3 shadow" style={{color: "#663399"}}>
                       <span>
                          My Posts
                       </span>
@@ -92,7 +92,7 @@ export default function NewsFeed() {
                 </Nav.Link>
                 <Nav.Link>
                   <li
-                    className={`list-group-item fs-5 py-3  shadow ${styles.signOutButton}`}style={{color: "#D7DF22"}}
+                    className={`list-group-item fs-5 py-3  shadow ${styles.signOutButton}`}style={{color: "#e32636"}}
                     onClick={handleSignOut}
                   >
                     <span>
