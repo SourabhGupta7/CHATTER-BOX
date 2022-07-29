@@ -20,7 +20,7 @@ export default function NewsFeed() {
     async function endAuth(context) {
       try {
         this.$axios.setHeader('Authorization', `Bearer ${JSON.parse(localStorage.getItem("UserId")).token}`);
-        await axios.post("auth/logout");
+        await axios.post("/logout");
         
         context.commit("setUser", {
           token: null,
