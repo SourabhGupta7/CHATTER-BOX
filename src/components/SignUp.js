@@ -27,7 +27,7 @@ export default function SignUp() {
   async function postSignUpInfo(inputData) {
     const response = await axios({
       method: "post",
-      url: "/api/v1/users/save", 
+      url: "http://backend-g8-ola.herokuapp.com/v1/users/save", 
       data: {
         firstName: inputData.firstName,
         lastName: inputData.lastName,
